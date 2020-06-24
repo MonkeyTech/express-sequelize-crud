@@ -12,6 +12,7 @@ import {
   GetFilteredList,
 } from './getList/filteredList'
 import { GetSearchList } from './getList/searchList'
+import { searchFields } from './getList/searchList'
 
 interface Options {
   getOne: GetOne
@@ -21,6 +22,8 @@ interface Options {
   getList: GetFilteredList
   search: GetSearchList
 }
+
+export { searchFields };
 
 export const crud = <M extends any>(
   path: string,

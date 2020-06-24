@@ -1,10 +1,10 @@
 import { RequestHandler } from 'express'
 import { CreateOptions, Identifier } from 'sequelize'
 
-export type Create = <R>(
-  body: R,
+export type Create = (
+  body: object,
   options?: CreateOptions
-) => Promise<R & { id: Identifier }>
+) => Promise<any & { id: Identifier }>
 
 export const create = (doCreate: Create): RequestHandler => async (
   req,
