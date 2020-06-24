@@ -2,8 +2,8 @@ import { RequestHandler } from 'express'
 import { UpdateOptions } from 'sequelize'
 import { GetOne } from './getOne'
 
-export type Update = (data: object, options: UpdateOptions) => Promise<any>
-
+export type Update = (data: any, options: UpdateOptions) => Promise<any>
+  
 export const update = (
   doUpdate: Update,
   doGetOne: GetOne

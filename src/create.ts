@@ -2,7 +2,7 @@ import { RequestHandler } from 'express'
 import { CreateOptions, Identifier } from 'sequelize'
 
 export type Create = (
-  body: object,
+  body: any,
   options?: CreateOptions
 ) => Promise<any & { id: Identifier }>
 
